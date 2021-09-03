@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Main Cointainer -->
+    <main id="main-container">
+      <!-- Overlay background for the popups -->
+      <div id="overlay" class="center hidden"></div>
+      <!-- To-Do popup -->
+      <div id="todo-popup" class="basic-popup center hidden">
+        <h1 class="popup-hed">What are the tasks today?</h1>
+        <input
+          type="text"
+          name=""
+          class="usr-input"
+          id="todo-text"
+          placeholder="Input task"
+        />
+        <button id="add-item" class="insert">Add</button>
+      </div>
+      <!-- Note popup -->
+      <div id="note-popup" class="basic-popup center hidden">
+        <h1 class="popup-hed">What do you want to note?</h1>
+        <textarea
+          name=""
+          id="note-text"
+          cols="30"
+          rows="10"
+          class="usr-input"
+          placeholder="Type in a note"
+        ></textarea>
+        <button id="add-note" class="insert">Add</button>
+      </div>
+      <!-- Left Container -->
+      <section id="left-pane">
+        <h1 id="main-head" class="default-left">
+          Manage your lists and take notes here.
+        </h1>
+        <div id="inst" class="default-left">
+          <h3>Instructions:</h3>
+          <br />
+          <p>Tap to strike/unstrike the items.</p>
+        </div>
+        <div id="options">
+          <button id="btn-todo" class="btn default-left">
+            Add to To-Do list
+          </button>
+          <button id="btn-note" class="btn default-left">Add to Note</button>
+        </div>
+      </section>
+      <!-- Right Container -->
+      <section id="right-pane">
+        <!-- To-Do pane -->
+        <section id="todo" class="right-basic">
+          <h1 class="right-head">To-Do's</h1>
+          <ul id="todo-list"></ul>
+        </section>
+        <!-- Note pane -->
+        <section id="note" class="right-basic">
+          <h1 class="right-head">Notes</h1>
+          <div id="para"></div>
+        </section>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
